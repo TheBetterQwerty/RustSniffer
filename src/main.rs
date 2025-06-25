@@ -57,7 +57,7 @@ fn main() {
             let ipv4_packet = Ipv4Packet::new(eth_packet.payload()).expect("Failed to parse IPv4 packet");
             let protocol = format!("{}", ipv4_packet.get_next_level_protocol());
             if let Some(x) = argv.get("-p") {
-                if protocol.eq_ignore_ascii_case(x) {
+                if !protocol.eq_ignore_ascii_case(x) {
                     continue;
                 }
             }
