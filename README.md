@@ -19,7 +19,7 @@ A simple packet sniffing program written in rust that captures and displays IP p
    ```bash
    cargo build
    ```
-2. ** Run Sniffer**
+2. **Run Sniffer**
    ```bash
    cargo run -q 
    ```
